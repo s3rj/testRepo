@@ -3,11 +3,11 @@ var map;
 var infowindow;
 
 function initMap() {
-  var pyrmont = {lat: -33.867, lng: 151.195};
+  var pyrmont = {lat: 33.867, lng: -97.195};
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: pyrmont,
-    zoom: 15
+    zoom: 5
   });
 
   infowindow = new google.maps.InfoWindow();
@@ -39,3 +39,25 @@ function createMarker(place) {
     infowindow.open(map, this);
   });
 }
+
+/////////
+var artist = "peppers"
+var queryURL = "https://tastedive.com/api/similar?k=299673-experime-45QCLZTD&q=red+hot+chili+"+artist;
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function(response) {
+
+  // Printing the entire object to console
+  console.log(response);
+
+
+});
+
+
+
+
+
+
+
+
