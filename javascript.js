@@ -41,19 +41,21 @@ function createMarker(place) {
 }
 
 /////////
-var artist = "peppers"
-var queryURL = "https://tastedive.com/api/similar?k=299673-experime-45QCLZTD&q=red+hot+chili+"+artist;
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).then(function(response) {
+function searchBandsInTown(artist) {
+  var artist = "peppers"
+  var queryURL = "https://tastedive.com/api/similar?k=299673-experime-45QCLZTD&q=red+hot+chili+"+artist;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
 
-  // Printing the entire object to console
-  console.log(response);
+    // Printing the entire object to console
+    console.log(response);
 
 
-});
-
+  });
+}
+searchBandsInTown("peppers")
 
 
 
